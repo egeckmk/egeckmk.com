@@ -29,7 +29,7 @@ const Dashboard = () => {
           }}>Ege Çakmak</Box>
           <Box sx={{
             fontSize: 16,
-          }}>Backend Developer / Software Enginier</Box>
+          }}>Backend Developer / Software Engineer</Box>
         </Box>
         <Avatar
           alt="avatar"
