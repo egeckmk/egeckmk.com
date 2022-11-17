@@ -4,10 +4,7 @@ import { useContext } from 'react';
 import { ColorModeContext, tokens } from '../../theme';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import NotificationOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
-import SettingOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
-import { maxWidth } from '@mui/system';
+import React from 'react';
 
 
 const Topbar = () => {
