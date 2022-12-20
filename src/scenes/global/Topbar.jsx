@@ -34,16 +34,16 @@ const Topbar = () => {
           }}
         >
 
-          <Link href="/works" sx={{ mr: 0.5, p: 1 }} color="inherit" underline="hover">Works</Link>
-          <Link href="/posts" sx={{ mr: 0.5, p: 1 }} color="inherit" underline="hover">Posts</Link>
-          <Link href="/uses" sx={{ p: 1 }} color="inherit" underline="hover">Uses</Link>
-          <Link href="https://github.com/egeckmk/egeckmk.com" target="_blank" sx={{ p: 1 }} color="inherit" underline="hover">
-            <GitHubIcon fontSize="small" sx={{ mr: 0.5 }} />
-            Source
-          </Link>
+          {/* <Link href="/works" sx={{ mr: 0.5, p: 1 }} color="inherit" underline="hover">Works</Link> */}
+          {/* <Link href="/posts" sx={{ mr: 0.5, p: 1 }} color="inherit" underline="hover">Posts</Link> */}
+          {/* <Link href="/uses" sx={{ p: 1 }} color="inherit" underline="hover">Uses</Link> */}
         </Box>
       </Box>
       <Box display="flex">
+      <Link href="https://github.com/egeckmk/egeckmk.com" target="_blank" sx={{ p: 1 }} color="inherit" underline="hover">
+            <GitHubIcon fontSize="small" sx={{ mr: 0.5 }} />
+            Source
+          </Link>
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === 'dark'
             ? (

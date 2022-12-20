@@ -56,7 +56,7 @@ const Dashboard = () => {
       </Box>
 
       <Box display="flex">
-        <Box sx={{ mr: 2, fontWeight: "bold", fontSize: 16, minWidth: "max-content" }} >2021 to present</Box>
+        <Box sx={{ mr: 2, fontWeight: "bold", fontSize: 16, minWidth: "max-content" }} >Feb 2021 - Dec 2022</Box>
         <Box sx={{ fontSize: 16, color: colors.gray[200] }}>Working as a Software Developer at Pronovuma Bilişim Teknoloji A.Ş. Izmir, Turkey</Box>
       </Box>
       <Box sx={{
