@@ -33,10 +33,6 @@ const Topbar = () => {
             fontSize: 18
           }}
         >
-
-          {/* <Link href="/works" sx={{ mr: 0.5, p: 1 }} color="inherit" underline="hover">Works</Link> */}
-          {/* <Link href="/posts" sx={{ mr: 0.5, p: 1 }} color="inherit" underline="hover">Posts</Link> */}
-          {/* <Link href="/uses" sx={{ p: 1 }} color="inherit" underline="hover">Uses</Link> */}
         </Box>
       </Box>
       <Box display="flex">
