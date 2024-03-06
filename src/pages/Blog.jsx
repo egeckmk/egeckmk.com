@@ -1,19 +1,24 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
 import { setBlogs } from "../store/blogs.js";
+import { client } from "../utils/axios.js";
 import BlogCard from "../components/BlogCard";
 
 const Blog = () => {
   const blogs = useSelector((state) => state.blogs.blogs);
   const dispatch = useDispatch();
+
   const getBlogs = async () => {
-    const response = await axios.get(
-      "https://egeckmk-com-backend.onrender.com/api/v1/blogs"
-    );
-    if (response.data) {
-      dispatch(setBlogs(response.data.data));
-    }
+    client
+      .get("/api/v1/blogs")
+      .then((res) => {
+        dispatch(setBlogs(res.data.data));
+      })
+      .catch((err) => {
+        toast.error(
+          err.message + "\n\nThere's been a problem. Please try again later."
+        );
+      });
   };
 
   useEffect(() => {

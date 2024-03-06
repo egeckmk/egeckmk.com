@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
+import { client } from "../utils/axios.js";
+
 import { formatDateFullDateTime } from "../utils/dateFormats";
 const Blog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState({});
   const getBlogs = async () => {
-    const response = await axios.get(
-      `https://egeckmk-com-backend.onrender.com/api/v1/blogs/${id}`
-    );
-    if (response.data) {
-      setBlog(response.data.blog);
-    }
+    client
+      .get(`/api/v1/blogs/${id}`)
+      .then((res) => {
+        setBlog(res.data.blog);
+      })
+      .catch((err) => {
+        toast.error(
+          err.message + "\n\nThere's been a problem. Please try again later."
+        );
+      });
   };
 
   useEffect(() => {

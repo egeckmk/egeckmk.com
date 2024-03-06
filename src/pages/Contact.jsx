@@ -33,7 +33,7 @@ const Contact = () => {
         toast.success(
           "Your message has been delivered.\nThank you for your interest."
         );
-        setTimeout(() => navigate(0), 2000);
+        // setTimeout(() => navigate(0), 2000);
       })
       .catch((err) => {
         toast.error(

@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const isProd = true;
+const isProd = false;
 
 export const client = axios.create({
   baseURL: isProd
-    ? "https://egeckmk-com-backend.onrender.com"
+    ? "https://egeckmk-com-backend-uhyc.onrender.com"
     : "http://localhost:3001",
   headers: {
     "Content-Type": "application/json",

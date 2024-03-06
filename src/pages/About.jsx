@@ -1,19 +1,24 @@
 import { useEffect } from "react";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setAboutItems } from "../store/abouts.js";
+import { client } from "../utils/axios.js";
 import AboutItem from "../components/AboutItem.jsx";
 
 const About = () => {
   const dispatch = useDispatch();
   const aboutItems = useSelector((state) => state.abouts.items);
+
   const getAboutItems = async () => {
-    const response = await axios.get(
-      "https://egeckmk-com-backend.onrender.com/api/v1/abouts"
-    );
-    if (response.data) {
-      dispatch(setAboutItems(response.data.data));
-    }
+    client
+      .get("/api/v1/abouts")
+      .then((res) => {
+        dispatch(setAboutItems(res.data.data));
+      })
+      .catch((err) => {
+        toast.error(
+          err.message + "\n\nThere's been a problem. Please try again later."
+        );
+      });
   };
 
   useEffect(() => {
