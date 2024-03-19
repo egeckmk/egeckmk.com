@@ -4,13 +4,13 @@ import { Toaster } from "react-hot-toast";
 import { store } from "./store/index.js";
 import Layout from "./components/layout/Layout";
 import Main from "./components/elements/Main";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Blog from "./pages/Blog";
-import Works from "./pages/Works";
-import WorkDetail from "./pages/WorkDetail";
-import BlogDetail from "./pages/BlogDetail";
-import Contact from "./pages/Contact";
+import Home from "./pages/Home/Home.jsx";
+import About from "./pages/About/About.jsx";
+import Works from "./pages/Work/Works.jsx";
+import WorkDetail from "./pages/Work/WorkDetail";
+// import Blog from "./pages/Blog";
+// import BlogDetail from "./pages/BlogDetail";
+// import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -50,7 +50,7 @@ function App() {
               </Main>
             }
           />
-          <Route
+          {/* <Route
             path="/blog"
             element={
               <Main pageTitle="Blog">
@@ -73,7 +73,7 @@ function App() {
                 <BlogDetail />
               </Main>
             }
-          />
+          /> */}
         </Routes>
       </Layout>
     </Provider>

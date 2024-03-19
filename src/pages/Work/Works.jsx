@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import WorkCard from "../components/WorkCard";
-import { setWorks } from "../store/works.js";
-import { client } from "../utils/axios.js";
+import { setWorks } from "../../store/works.js";
+import { client } from "../../utils/axios.js";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
+import "./style.css";
+import { Link } from "react-router-dom";
 
 const Works = () => {
   // Hooks definitions
@@ -28,15 +29,22 @@ const Works = () => {
   useEffect(() => {
     getWorks();
   }, []);
+
   return (
-    <div className="flex justify-center items-center w-full text-black dark:text-white mb-4">
-      <div className="w-full">
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4">
-          {works.map((work) => (
-            <WorkCard data={work} />
-          ))}
-        </div>
-      </div>
+    <div className="works-grid">
+      {works.map((work) => (
+        <Link to={work._id} key={work._id}>
+          <div className="work-card">
+            <img
+              className="works-cover-image-thumbnail"
+              src={work.coverImageUrl}
+              alt={work.name + "-cover-image"}
+            />
+            <h5 className="works-name">{work.name}</h5>
+            <p className="works-short-description">{work.shortDescription}</p>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };

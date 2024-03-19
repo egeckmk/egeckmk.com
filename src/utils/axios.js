@@ -1,14 +1,10 @@
 import axios from "axios";
 
-const isProd = false;
-
 export const client = axios.create({
-  baseURL: isProd
+  baseURL: JSON.parse(import.meta.env.VITE_APP_IS_PROD)
     ? "https://egeckmk-com-backend-uhyc.onrender.com"
     : "http://localhost:3001",
   headers: {
     "Content-Type": "application/json",
-    Authorization:
-      "Bearer " + JSON.parse(localStorage.getItem("egeckmk-com-token")),
   },
 });

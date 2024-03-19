@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { client } from "../utils/axios.js";
+import { client } from "../../utils/axios.js";
 
-import { formatDateFullDateTime } from "../utils/dateFormats";
+import { formatDateFullDateTime } from "../../utils/dateFormats.js";
 const Blog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState({});

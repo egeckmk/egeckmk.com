@@ -1,0 +1,45 @@
+.about-line {
+  position: relative;
+  border-left-width: 1px;
+  border-color: white;
+}
+
+.about-line li {
+  margin-bottom: 2.5rem /* 40px */;
+  margin-left: 1rem /* 16px */;
+}
+
+.dot {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  border-color: black;
+  background-color: #fbbf24;
+  margin-top: 0.375rem;
+  left: -0.4rem;
+  border-width: 1px;
+}
+
+.working-time {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.title {
+  font-size: 1.125rem;
+  line-height: 1.75.rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.description {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #9ca3af;
+}
