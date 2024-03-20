@@ -8,8 +8,8 @@ import Home from "./pages/Home/Home.jsx";
 import About from "./pages/About/About.jsx";
 import Works from "./pages/Work/Works.jsx";
 import WorkDetail from "./pages/Work/WorkDetail";
-// import Blog from "./pages/Blog";
-// import BlogDetail from "./pages/BlogDetail";
+import Blog from "./pages/Blog/Blog.jsx";
+import BlogDetail from "./pages/Blog/BlogDetail.jsx";
 // import Contact from "./pages/Contact";
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
               </Main>
             }
           />
-          {/* <Route
+          <Route
             path="/blog"
             element={
               <Main pageTitle="Blog">
@@ -59,18 +59,18 @@ function App() {
             }
           />
           <Route
-            path="/contact"
-            element={
-              <Main pageTitle="Contact Me">
-                <Contact />
-              </Main>
-            }
-          />
-          <Route
             path="/blog/:id"
             element={
               <Main>
                 <BlogDetail />
+              </Main>
+            }
+          />
+          {/* <Route
+            path="/contact"
+            element={
+              <Main pageTitle="Contact Me">
+                <Contact />
               </Main>
             }
           /> */}

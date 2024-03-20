@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setBlogs } from "../store/blogs.js";
-import { client } from "../utils/axios.js";
-import BlogCard from "../components/BlogCard";
+import { setBlogs } from "../../store/blogs.js";
+import { client } from "../../utils/axios.js";
+import BlogCard from "../../components/BlogCard";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
+import "./style.css";
 
 const Blog = () => {
   const blogs = useSelector((state) => state.blogs.blogs);
@@ -26,14 +29,26 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center w-full text-black dark:text-white mb-4">
-      <div className="w-full">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-          {blogs.map((item) => (
-            <BlogCard data={item} />
-          ))}
+    <div className="blogs-container">
+      {blogs.map((item) => (
+        <div className="blog-card" key={item._id}>
+          <img
+            className="blog-cover-image-thumbnail"
+            src={item.coverImageUrl}
+            alt={item.title + "-cover-image"}
+          />
+          <h5 className="blog-title">{item.title}</h5>
+          <p
+            className="blog-card-content"
+            dangerouslySetInnerHTML={{ __html: item.content }}
+          ></p>
+          <Link className="read-more" to={`${item._id}`}>
+            <div>Read more</div>
+            <ArrowRightIcon className="right-arrow" />
+          </Link>
         </div>
-      </div>
+        // <BlogCard data={item} />
+      ))}
     </div>
   );
 };
