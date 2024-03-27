@@ -1,0 +1,38 @@
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+.contact-left {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-left-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.contact-left-info-container {
+  display: grid;
+  grid-template-columns: 1.75rem auto;
+}
+
+.contact-left-info-icon {
+  height: 1.25rem;
+  color: #fbbf24;
+}
+
+.contact-left-info-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

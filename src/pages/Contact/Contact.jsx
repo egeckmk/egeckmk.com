@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { client } from "../utils/axios.js";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import {
@@ -7,6 +6,8 @@ import {
   EnvelopeIcon,
   DevicePhoneMobileIcon,
 } from "@heroicons/react/24/outline";
+import { client } from "../../utils/axios.js";
+import "./style.css";
 
 const Contact = () => {
   // Hooks definitions
@@ -33,7 +34,6 @@ const Contact = () => {
         toast.success(
           "Your message has been delivered.\nThank you for your interest."
         );
-        // setTimeout(() => navigate(0), 2000);
       })
       .catch((err) => {
         toast.error(
@@ -42,32 +42,32 @@ const Contact = () => {
       });
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 md:mb-0">
-      <div>
-        <div className="text-2xl mb-4">
-          Your thoughts are very valuable to me
+    <div className="contact-container">
+      <div className="contact-left">
+        <div className="contact-left-header">
+          Your thoughts are very valuable to me.
         </div>
-        <div className="mb-4">
+        <p>
           You can contact me via the contact form or my e-mail addresses and let
           me know your opinions. You can be sure that I will do my best to
           support your work within the subjects I am interested in.
-        </div>
-        <div id="info-list-64a9b479928a5" class="info-list-w-icon">
-          <div class="flex">
-            <MapPinIcon className="h-5 mr-2 text-amber-400" />
-            <div class="ci-text">
-              <h5>Efeler / Aydin / Turkey</h5>
+        </p>
+        <div>
+          <div class="contact-left-info-container">
+            <MapPinIcon className="contact-left-info-icon" />
+            <div class="contact-left-info-text">
+              <h5>İstanbul / Turkey</h5>
             </div>
           </div>
-          <div class="flex">
-            <EnvelopeIcon className="h-5 mr-2 text-amber-400" />
-            <div class="ci-text">
+          <div class="contact-left-info-container">
+            <EnvelopeIcon className="contact-left-info-icon" />
+            <div class="contact-left-info-text">
               <h5>egeckmk@gmail.com</h5>
             </div>
           </div>
-          <div class="flex">
-            <DevicePhoneMobileIcon className="h-5 mr-2 text-amber-400" />
-            <div class="ci-text">
+          <div class="contact-left-info-container">
+            <DevicePhoneMobileIcon className="contact-left-info-icon" />
+            <div class="contact-left-info-text">
               <h5>0 555 896 8719</h5>
             </div>
           </div>

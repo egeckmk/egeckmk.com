@@ -10,7 +10,7 @@ import Works from "./pages/Work/Works.jsx";
 import WorkDetail from "./pages/Work/WorkDetail";
 import Blog from "./pages/Blog/Blog.jsx";
 import BlogDetail from "./pages/Blog/BlogDetail.jsx";
-// import Contact from "./pages/Contact";
+import Contact from "./pages/Contact/Contact.jsx";
 
 function App() {
   return (
@@ -66,14 +66,14 @@ function App() {
               </Main>
             }
           />
-          {/* <Route
+          <Route
             path="/contact"
             element={
               <Main pageTitle="Contact Me">
                 <Contact />
               </Main>
             }
-          /> */}
+          />
         </Routes>
       </Layout>
     </Provider>
