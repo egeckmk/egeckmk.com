@@ -1,10 +1,11 @@
-import { Box, IconButton, useTheme, Link } from "@mui/material";
+import { Box, IconButton, useTheme, Link, Avatar } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import React from "react";
+import avatar from "../../images/logo.png";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -23,7 +24,8 @@ const Topbar = () => {
             fontWeight: "bold",
           }}
         >
-          <Link href="/" color="inherit" underline="none">
+          <img src={avatar} alt="logo" style={{ width: "96px" }} />
+          <Link href="/" color="inherit" underline="none" marginLeft="1rem">
             Ege Çakmak
           </Link>
         </Box>
