@@ -1,6 +1,5 @@
-import { useContext, useState, useMemo, createContext, useEffect } from "react";
+import { useState, useMemo, createContext, useEffect } from "react";
 import { createTheme } from "@mui/material/styles";
-import { color, typography } from "@mui/system";
 
 export const tokens = (mode) => ({
   ...(mode === "dark"
@@ -82,6 +81,9 @@ export const tokens = (mode) => ({
           800: "#623f04",
           900: "#312002",
         },
+        amber: {
+          400: "#fbbf24",
+        },
       }
     : {
         gray: {
@@ -161,6 +163,9 @@ export const tokens = (mode) => ({
           800: "#fbd89d",
           900: "#fdecce",
         },
+        amber: {
+          400: "#fbbf24",
+        },
       }),
 });
 
@@ -183,7 +188,8 @@ export const themeSettings = (mode) => {
               light: colors.gray[100],
             },
             background: {
-              default: colors.primary[500],
+              // default: colors.primary[500],
+              default: colors.gray[900],
             },
           }
         : {
@@ -199,7 +205,8 @@ export const themeSettings = (mode) => {
               light: colors.gray[100],
             },
             background: {
-              default: "#fcfcfc",
+              // default: "#fcfcfc",
+              default: colors.gray[900],
             },
           }),
     },

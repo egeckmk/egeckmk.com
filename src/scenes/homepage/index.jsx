@@ -24,8 +24,9 @@ const Dashboard = () => {
           p: 1.5,
           mb: 2.25,
           borderRadius: 1,
-          backgroundColor: colors.gray[700],
-          color: colors.gray[100],
+          backgroundColor: colors.amber[400],
+          color: "#141414",
+          fontWeight: "900",
         }}
       >
         Hello, I'm an backend developer based in Turkey!
@@ -48,7 +49,7 @@ const Dashboard = () => {
             Backend Developer / Software Engineer
           </Box>
         </Box>
-        <Avatar alt="avatar" src={avatar} sx={{ width: 96, height: 96 }} />
+        <Avatar alt="avatar" src={avatar} sx={{ width: 192, height: 192 }} />
       </Box>
       <Box
         sx={{
@@ -66,7 +67,6 @@ const Dashboard = () => {
           Born in Aydin, Turkey.
         </Box>
       </Box>
-
       <Box display="flex">
         <Box sx={{ mr: 2, fontWeight: "bold", fontSize: 16 }}>2021</Box>
         <Box sx={{ fontSize: 16, color: colors.gray[200] }}>
@@ -74,7 +74,6 @@ const Dashboard = () => {
           Suleyman Demirel University.
         </Box>
       </Box>
-
       <Box display="flex">
         <Box
           sx={{
@@ -89,6 +88,21 @@ const Dashboard = () => {
         <Box sx={{ fontSize: 16, color: colors.gray[200] }}>
           Working as a Software Developer at Pronovuma Bilişim Teknoloji A.Ş.
           Izmir, Turkey
+        </Box>
+      </Box>
+      <Box display="flex">
+        <Box
+          sx={{
+            mr: 2,
+            fontWeight: "bold",
+            fontSize: 16,
+            minWidth: "max-content",
+          }}
+        >
+          July 2021 - Present
+        </Box>
+        <Box sx={{ fontSize: 16, color: colors.gray[200] }}>
+          Working as a Software Developer at Petrol Ofisi A.Ş. Istanbul, Turkey
         </Box>
       </Box>
       <Box
@@ -125,7 +139,7 @@ const Dashboard = () => {
             }}
           >
             <SportsSoccer sx={{ mr: "8px" }} />
-            FootBall
+            Football
           </Box>
           <Box
             display="flex"
